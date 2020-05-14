@@ -3,8 +3,6 @@
 apt-get install hyperv-daemons xrdp xorgxrdp
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
 apt update
-#cdrom aus sources.list entfernen
-
 
 sudo apt install -t buster-backports linux-image-amd64
 sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
@@ -17,8 +15,7 @@ echo "hv_netvsc" >> /etc/initramfs-tools/modules
 echo "hv_balloon" >> /etc/initramfs-tools/modules
 echo "hv_utils" >> /etc/initramfs-tools/modules
 
-cp -r /boot/efi/EFI/debian /boot/efi/EFI/BOOT
-cp /boot/efi/EFI/BOOT/shimx64.efi /boot/efi/EFI/BOOT/bootx64.efi
+mkdir boot/efi/EFI/BOOT
 
 export PATH=/sbin:$PATH
 
