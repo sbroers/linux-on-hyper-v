@@ -1,17 +1,7 @@
 #!/bin/bash
 
-#
-# This script is for Ubuntu 18.04 Bionic Beaver to download and install XRDP+XORGXRDP via
-# source.
-#
-# Major thanks to: http://c-nergy.be/blog/?p=11336 for the tips.
-#
-
-###############################################################################
-# Use HWE kernel packages
-#
 HWE=""
-#HWE="-hwe-18.04"
+#HWE="-hwe-20.04"
 
 ###############################################################################
 # Update our machine to the latest code if we need to.
