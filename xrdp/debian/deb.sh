@@ -1,16 +1,13 @@
 # enhanced-session-mode debian 10
 
-apt-get install hyperv-daemons
+echo "Als Root Ausführen!"
+
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
 apt update
-#cdrom aus sources.list entfernen
-
+apt install hyperv-daemons
 
 sudo apt install -t buster-backports linux-image-amd64
-
 sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
-
-wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/xrdp/0.9.12-1/xrdp_0.9.12.orig.tar.gz
 
 echo "# Hyper-V Modules" >> /etc/initramfs-tools/modules
 echo "hv_vmbus" >> /etc/initramfs-tools/modules
