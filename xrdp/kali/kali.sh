@@ -1,8 +1,11 @@
 # enhanced-session-mode debian 10
+echo " Als Root ausführen! "
 
-apt-get install hyperv-daemons xrdp xorgxrdp
+
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
-apt update
+sudo apt update
+
+sudo apt install hyperv-daemons xrdp xorgxrdp
 
 sudo apt install -t buster-backports linux-image-amd64
 sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
@@ -15,7 +18,9 @@ echo "hv_netvsc" >> /etc/initramfs-tools/modules
 echo "hv_balloon" >> /etc/initramfs-tools/modules
 echo "hv_utils" >> /etc/initramfs-tools/modules
 
-mkdir boot/efi/EFI/BOOT
+mkdir /boot/efi/EFI/BOOT
+wget https://github.com/sbroers/linux-on-hyper-v/blob/master/efi/BOOTx64.EFI
+mv BOOTx64.EFI /boot/efi/EFI/BOOT 
 
 export PATH=/sbin:$PATH
 
