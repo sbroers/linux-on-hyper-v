@@ -1,0 +1,103 @@
+{
+
+"images": [
+
+{
+
+"name": "Kali Linux 2020.01",
+
+"publisher": "WBS Training AG",
+
+"lastUpdated": "2020-05-13T10:00:00Z",
+
+"version": "2020.01",
+
+"locale": "de-DE",
+
+"description": [
+
+"Kali Linux 2020.01",
+
+"\r\n\r\n",
+
+"Kali Linux ist eine auf Debian basierende Linux-Distribution, die vor allem Programme für Penetrationstests und digitale Forensik umfasst. Kali Linux richtet sich in erster Linie an professionelle und fortgeschrittene Anwender.",
+
+"\r\n\r\n",
+
+],
+
+"config": {
+
+"secureBoot": "false",
+"enhancedSessionTransportType": "HvSocket",
+},
+
+"requirements": { "diskSpace": "10000000000"},
+
+"disk": {
+
+"uri": "file://C:/Hyper-V_Gallery/kali20/kali20.vhdx",
+
+"hash": "sha256:70C1168EAB9AFB199FA3F032D3FAB6A4CE166F3D5D799FC92C1602CBA80C8CF7",
+
+},
+
+"logo": {
+
+"uri": "file://C:/Hyper-V_Gallery/kali20/kali20_logo.png",
+
+"hash": "sha256:0399F5794D6426A520EF8CAEB638181BAF46DF637F2D8C612E63ECF1023BBB20",
+
+},
+
+"symbol": {
+
+"uri": "file://C:/Hyper-V_Gallery/kali20/kali20_symbol.png",
+
+"hash": "sha256:6A0666299341F24F30A656EAFD6920CF752D9019DEC204CDCFAA80FA27129CC6",
+
+},
+
+"thumbnail": {
+
+"uri": "file://C:/Hyper-V_Gallery/kali20/kali20_thumbnail.png",
+
+"hash": "sha256:BC0D60750C08B02F948BE8A6A61B1900EE6845371DE2CA688BE1A3553188E39A",
+
+},
+
+"details": [
+
+{
+
+"name": "Edition",
+
+"value": "Kali Linux 2020.01",
+
+},
+
+{
+
+"name": "Copyright",
+
+"value": "Copyright (c) Offensive Security",
+
+},
+
+{
+
+"name": "License",
+
+"value": "https://www.kali.org/EULA.txt",
+
+},
+
+]
+
+}
+
+,
+
+]
+
+}
