@@ -1,0 +1,105 @@
+{
+
+"$schema": "https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/vmgallery/vm-gallery-schema.json",
+
+"images": [
+
+    {
+
+        "name": "Arch Linux",
+
+        "publisher": "WBS Training AG",
+
+        "lastUpdated": "2020-05-15T10:00:00Z",
+
+        "version": "2020.05.01",
+
+        "locale": "de-DE",
+
+        "description": [
+
+        "Arch Linux 2020.05.01",
+
+        "\r\n\r\n",
+
+        "Arch Linux ist eine AMD64-optimierte Linux-Distribution mit Rolling Releases, deren Entwicklerteam dem KISS-Prinzip folgt. Zugunsten der Einfachheit wird auf grafische Installations- und Konfigurationshilfen verzichtet. ",
+
+        "\r\n\r\n",
+
+        ],
+
+"config": {
+
+"secureBoot": "false",
+"enhancedSessionTransportType": "HvSocket",
+},
+
+"requirements": { "diskSpace": "10000000000"},
+
+"disk": {
+
+"uri": "file://C:/Hyper-V_Gallery/deb10/deb10.vhdx",
+
+"hash": "sha256:A1040B1E9E7BDA1CF6737BE4346AA55DB6C04A6773AD710CB5AA29BC9AEC40EA",
+
+},
+
+"logo": {
+
+"uri": "file://C:/Hyper-V_Gallery/deb10/debian_logo.png",
+
+"hash": "sha256:8A6293D68177B97D8656544D70740AD0515BD10A2E612159F282DC9F8C3EB6E5",
+
+},
+
+"symbol": {
+
+"uri": "file://C:/Hyper-V_Gallery/deb10/debian_symbol.png",
+
+"hash": "sha256:67CFB8A64C70549B50762485D1F1EE4D5225E55657CD65CA1394810136EA5431",
+
+},
+
+"thumbnail": {
+
+"uri": "file://C:/Hyper-V_Gallery/deb10/debian_thumbnail.png",
+
+"hash": "sha256:DE42C3695D8B04BEDDFA78263DBBBAC976E385FFC778D9D22E305D4A7CD6235C",
+
+},
+
+"details": [
+
+{
+
+"name": "Edition",
+
+"value": "Arch Linux 2020.05.01",
+
+},
+
+{
+
+"name": "Copyright",
+
+"value": "Copyright (c) Arch Linux",
+
+},
+
+{
+
+"name": "License",
+
+"value": "https://wiki.archlinux.org/index.php?title=Licenses&redirect=no",
+
+},
+
+]
+
+}
+
+,
+
+]
+
+}
