@@ -1,12 +1,14 @@
 {
 
+"$schema": "https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/vmgallery/vm-gallery-schema.json",
+
 "images": [
 
 {
 
 "name": "Ubuntu 20.04 LTS Server",
 
-"publisher": "Canonical Ltd / WBS Training AG",
+"publisher": "sbroers",
 
 "lastUpdated": "2020-05-12T10:00:00Z",
 
@@ -43,7 +45,7 @@
 
 "logo": {
 
-"uri": "file://C:/Hyper-V_Gallery/u2004/ubuntu_logo.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_logo.png",
 
 "hash": "sha256:336689A74C41848C7B1A09384DB0E06DDAE747FE554B774DD2CF9382537AB457",
 
@@ -51,7 +53,7 @@
 
 "symbol": {
 
-"uri": "file://C:/Hyper-V_Gallery/u2004/ubuntu_symbol.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_symbol.png",
 
 "hash": "sha256:D53CCE48671403029CB1C4C25510428436118AC920A19CC7DD272506F5B9CD24",
 
@@ -59,7 +61,7 @@
 
 "thumbnail": {
 
-"uri": "file://C:/Hyper-V_Gallery/u2004/ubuntu_thumbnail.jpg",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_thumbnail.jpg",
 
 "hash": "sha256:C322F8007616C6410492EAC4E1C574C3DF8E20B0A488D097DCBCC450996CD6CB",
 
