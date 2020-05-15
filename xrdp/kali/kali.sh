@@ -3,12 +3,12 @@ echo " Als Root ausführen! "
 
 
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
-sudo apt update
+sudo apt update -y
 
-sudo apt install hyperv-daemons xrdp xorgxrdp
+sudo apt install hyperv-daemons xrdp xorgxrdp -y
 
-sudo apt install -t buster-backports linux-image-amd64
-sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
+sudo apt install -t buster-backports linux-image-amd64 -y
+sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree -y
 
 echo "# Hyper-V Modules" >> /etc/initramfs-tools/modules
 echo "hv_vmbus" >> /etc/initramfs-tools/modules
@@ -63,6 +63,9 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 EOF
+
+# fix missing xrdp.ini
+cp /etc/xrdp/xrdp.ini_orig /etc/xrdp/xrdp.ini
 
 # reconfigure the service
 
