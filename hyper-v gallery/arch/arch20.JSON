@@ -18,7 +18,7 @@
 
         "description": [
 
-        "Arch Linux 2020.05.01",
+        "archlinux 2020.05.01",
 
         "\r\n\r\n",
 
@@ -38,33 +38,35 @@
 
 "disk": {
 
-"uri": "file://C:/Hyper-V_Gallery/deb10/deb10.vhdx",
+"uri": "http://mirror.rackspace.com/archlinux/iso/2020.05.01/archlinux-2020.05.01-x86_64.iso",
 
-"hash": "sha256:A1040B1E9E7BDA1CF6737BE4346AA55DB6C04A6773AD710CB5AA29BC9AEC40EA",
+"hash": "sha256:0B71A04ECD9CEEFA72683948BB971DC8C77A92C0EDBEAC5647B98A6E47B5C203",
+
+"archiveRelativePath": "archlinux-2020.05.01-x86_64.iso"
 
 },
 
 "logo": {
 
-"uri": "file://C:/Hyper-V_Gallery/deb10/debian_logo.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_logo.png",
 
-"hash": "sha256:8A6293D68177B97D8656544D70740AD0515BD10A2E612159F282DC9F8C3EB6E5",
+"hash": "sha256:D0221276BC214FCD645AB58C55816467C2ADDFF4E3D899BCE85DA3E6B0D770D2",
 
 },
 
 "symbol": {
 
-"uri": "file://C:/Hyper-V_Gallery/deb10/debian_symbol.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_symbol.png",
 
-"hash": "sha256:67CFB8A64C70549B50762485D1F1EE4D5225E55657CD65CA1394810136EA5431",
+"hash": "sha256:B06B3EB85F4E9DD2D66FA334C1F318494A6BEB861A15DE637F9BFD28FA4FBD3D",
 
 },
 
 "thumbnail": {
 
-"uri": "file://C:/Hyper-V_Gallery/deb10/debian_thumbnail.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_thumbnail.png",
 
-"hash": "sha256:DE42C3695D8B04BEDDFA78263DBBBAC976E385FFC778D9D22E305D4A7CD6235C",
+"hash": "sha256:F1ADEE47FF89ADF5AC4BA6450B7D4F557E2B2DE0E88BEE322202FBAB7C7CCC04",
 
 },
 
@@ -74,7 +76,7 @@
 
 "name": "Edition",
 
-"value": "Arch Linux 2020.05.01",
+"value": "archlinux 2020.05.01",
 
 },
 
