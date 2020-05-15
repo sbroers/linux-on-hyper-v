@@ -1,0 +1,102 @@
+{
+
+"images": [
+
+{
+
+"name": "Ubuntu 20.04 LTS Server",
+
+"publisher": "Canonical Ltd / WBS Training AG",
+
+"lastUpdated": "2020-05-12T10:00:00Z",
+
+"version": "20.04",
+
+"locale": "de-DE",
+
+"description": [
+
+"Ubuntu 20.04 LTS Server.",
+
+"\r\n\r\n",
+
+"Ubuntu is used by thousands of development teams around the world because of its versatility, reliability and extensive developer libraries. ",
+
+"\r\n\r\n",
+
+],
+
+"config": {
+
+"secureBoot": "false",
+},
+
+"requirements": { "diskSpace": "10000000000"},
+
+"disk": {
+
+"uri": "file://C:/Hyper-V_Gallery/us2004/us2004.vhdx",
+
+"hash": "sha256:77551DFA11C2218AE34E3A7944A09C966D88AF8978002D5448BCC70FC3866812",
+
+},
+
+"logo": {
+
+"uri": "file://C:/Hyper-V_Gallery/u2004/ubuntu_logo.png",
+
+"hash": "sha256:336689A74C41848C7B1A09384DB0E06DDAE747FE554B774DD2CF9382537AB457",
+
+},
+
+"symbol": {
+
+"uri": "file://C:/Hyper-V_Gallery/u2004/ubuntu_symbol.png",
+
+"hash": "sha256:D53CCE48671403029CB1C4C25510428436118AC920A19CC7DD272506F5B9CD24",
+
+},
+
+"thumbnail": {
+
+"uri": "file://C:/Hyper-V_Gallery/u2004/ubuntu_thumbnail.jpg",
+
+"hash": "sha256:C322F8007616C6410492EAC4E1C574C3DF8E20B0A488D097DCBCC450996CD6CB",
+
+},
+
+"details": [
+
+{
+
+"name": "Edition",
+
+"value": "Ubuntu 20.04 LTS Server",
+
+},
+
+{
+
+"name": "Copyright",
+
+"value": "Copyright (c) Canonical Ltd.",
+
+},
+
+{
+
+"name": "License",
+
+"value": "https://ubuntu.com/licensing",
+
+},
+
+]
+
+}
+
+,
+
+]
+
+}
