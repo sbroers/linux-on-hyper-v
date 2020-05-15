@@ -9,7 +9,7 @@ The JSON File Path musst be added to the registry.
 
 Hyper-V can also add JSON Files over http/https
 
-The Stanstard VM Tamplates Address from Microsoft: https://go.microsoft.com/fwlink/?linkid=851584
+The Stanstard VM Templates Address from Microsoft: https://go.microsoft.com/fwlink/?linkid=851584
 
 For more Infos: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/custom-gallery
 
