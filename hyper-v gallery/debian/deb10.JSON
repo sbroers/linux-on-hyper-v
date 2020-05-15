@@ -1,10 +1,12 @@
 {
 
+"$schema": "https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/vmgallery/vm-gallery-schema.json",
+
 "images": [
 
 {
 
-"name": "Debian 10.4",
+"name": "sbroers",
 
 "publisher": "WBS Training AG",
 
@@ -44,7 +46,7 @@
 
 "logo": {
 
-"uri": "file://C:/Hyper-V_Gallery/deb10/debian_logo.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/debian/debian_logo.png",
 
 "hash": "sha256:8A6293D68177B97D8656544D70740AD0515BD10A2E612159F282DC9F8C3EB6E5",
 
@@ -52,7 +54,7 @@
 
 "symbol": {
 
-"uri": "file://C:/Hyper-V_Gallery/deb10/debian_symbol.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/debian/debian_symbol.png",
 
 "hash": "sha256:67CFB8A64C70549B50762485D1F1EE4D5225E55657CD65CA1394810136EA5431",
 
@@ -60,7 +62,7 @@
 
 "thumbnail": {
 
-"uri": "file://C:/Hyper-V_Gallery/deb10/debian_thumbnail.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/debian/debian_thumbnail.png",
 
 "hash": "sha256:DE42C3695D8B04BEDDFA78263DBBBAC976E385FFC778D9D22E305D4A7CD6235C",
 

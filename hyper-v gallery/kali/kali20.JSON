@@ -4,9 +4,9 @@
 
 {
 
-"name": "Kali Linux 2020.01",
+"name": "Kali Linux 2020.02",
 
-"publisher": "WBS Training AG",
+"publisher": "sbroers",
 
 "lastUpdated": "2020-05-13T10:00:00Z",
 
@@ -16,7 +16,7 @@
 
 "description": [
 
-"Kali Linux 2020.01",
+"Kali Linux 2020.02",
 
 "\r\n\r\n",
 
@@ -44,7 +44,7 @@
 
 "logo": {
 
-"uri": "file://C:/Hyper-V_Gallery/kali20/kali20_logo.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_logo.png",
 
 "hash": "sha256:0399F5794D6426A520EF8CAEB638181BAF46DF637F2D8C612E63ECF1023BBB20",
 
@@ -52,7 +52,7 @@
 
 "symbol": {
 
-"uri": "file://C:/Hyper-V_Gallery/kali20/kali20_symbol.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_symbol.png",
 
 "hash": "sha256:6A0666299341F24F30A656EAFD6920CF752D9019DEC204CDCFAA80FA27129CC6",
 
@@ -60,7 +60,7 @@
 
 "thumbnail": {
 
-"uri": "file://C:/Hyper-V_Gallery/kali20/kali20_thumbnail.png",
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_thumbnail.png",
 
 "hash": "sha256:BC0D60750C08B02F948BE8A6A61B1900EE6845371DE2CA688BE1A3553188E39A",
 
@@ -72,7 +72,7 @@
 
 "name": "Edition",
 
-"value": "Kali Linux 2020.01",
+"value": "Kali Linux 2020.02",
 
 },
 
