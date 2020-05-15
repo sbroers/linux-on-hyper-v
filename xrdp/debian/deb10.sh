@@ -1,14 +1,16 @@
-# enhanced-session-mode debian 10
-echo " Als Root ausführen! "
+# enhanced-session-mode debian 10.4
 
+if [ "$(id -u)" -ne 0 ]; then
+    echo 'This script must be run with root privileges' >&2
+    exit 1
+fi
 
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
-sudo apt update -y
+apt update
+apt install hyperv-daemons
 
-sudo apt install hyperv-daemons xrdp xorgxrdp -y
-
-sudo apt install -t buster-backports linux-image-amd64 -y
-sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree -y
+sudo apt install -t buster-backports linux-image-amd64
+sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
 
 echo "# Hyper-V Modules" >> /etc/initramfs-tools/modules
 echo "hv_vmbus" >> /etc/initramfs-tools/modules
@@ -18,13 +20,18 @@ echo "hv_netvsc" >> /etc/initramfs-tools/modules
 echo "hv_balloon" >> /etc/initramfs-tools/modules
 echo "hv_utils" >> /etc/initramfs-tools/modules
 
-mkdir /boot/efi/EFI/BOOT
-wget https://github.com/sbroers/linux-on-hyper-v/blob/master/efi/BOOTx64.EFI
-mv BOOTx64.EFI /boot/efi/EFI/BOOT 
+cp -r /boot/efi/EFI/debian /boot/efi/EFI/BOOT
+cp /boot/efi/EFI/BOOT/shimx64.efi /boot/efi/EFI/BOOT/bootx64.efi
 
 export PATH=/sbin:$PATH
 
 update-initramfs -u
+
+wget http://de.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg8-empty/libjpeg8_8c-2ubuntu8_amd64.deb
+wget http://de.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo8_2.0.3-0ubuntu1_amd64.deb
+wget http://de.archive.ubuntu.com/ubuntu/pool/universe/x/xrdp/xrdp_0.9.12-1_amd64.deb
+
+dpkg -i *
 
 # Configure the installed XRDP ini files.
 # use vsock transport.
@@ -64,13 +71,7 @@ ResultInactive=no
 ResultActive=yes
 EOF
 
-# fix missing xrdp.ini
-cp /etc/xrdp/xrdp.ini_orig /etc/xrdp/xrdp.ini
-
 # reconfigure the service
-
-systemctl enable xrdp
-systemctl enable xrdp-sesman
 systemctl daemon-reload
 systemctl start xrdp
 
