@@ -1,5 +1,6 @@
 # enhanced-session-mode kali 2020.02
 
+# add backports repo
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
 sudo apt update -y
 
