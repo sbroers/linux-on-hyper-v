@@ -4,10 +4,10 @@
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
 sudo apt update -y
 
-sudo apt install hyperv-daemons xrdp xorgxrdp -y
-
 sudo apt install -t buster-backports linux-image-amd64 -y
 sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree -y
+
+sudo apt install hyperv-daemons xrdp xorgxrdp -y
 
 echo "# Hyper-V Modules" >> /etc/initramfs-tools/modules
 echo "hv_vmbus" >> /etc/initramfs-tools/modules
