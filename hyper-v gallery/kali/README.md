@@ -1,3 +1,5 @@
+OneDrive Link is broken... fixing it tomorrow
+
 This JSON File set's up an Kali Linux VM 2020.02
 
 Put the raw link in the GalleryLocation RegistryEntry.
