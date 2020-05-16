@@ -6,77 +6,77 @@
 
 {
 
-"name": "Ubuntu 20.04 LTS Desktop",
+        "name": "Ubuntu 20.04 LTS Desktop",
 
-"publisher": "sbroers",
+        "publisher": "sbroers",
 
-"lastUpdated": "2020-05-12T10:00:00Z",
+        "lastUpdated": "2020-05-12T10:00:00Z",
 
-"version": "20.04",
+        "version": "20.04",
 
-"locale": "de-DE",
+        "locale": "de-DE",
 
-"description": [
+        "description": [
 
-"Ubuntu 20.04 LTS Desktop.",
+                  "Ubuntu 20.04 LTS Desktop.",
 
-"\r\n\r\n",
+                  "\r\n\r\n",
 
-"Ubuntu is used by thousands of development teams around the world because of its versatility, reliability and extensive developer libraries. ",
+                  "Ubuntu is used by thousands of development teams around the world because of its versatility, reliability and extensive developer libraries. ",
 
-"\r\n\r\n",
+                  "\r\n\r\n",
 
-],
+            ],
 
 "config": {
 
-"secureBoot": "false",
-"enhancedSessionTransportType": "HvSocket",
-},
+        "secureBoot": "false",
+        "enhancedSessionTransportType": "HvSocket",
+          },
 
 "requirements": { "diskSpace": "10000000000"},
 
 "disk": {
 
-"uri": "file://C:/Hyper-V_Gallery/u2004/u2004.vhdx",
+        "uri": "file://C:/Hyper-V_Gallery/u2004/u2004.vhdx",
 
-"hash": "sha256:77458DB9BCC41E3FCE9913662DE50F1B071548C9FC343894A07176DEFE94F28B",
+        "hash": "sha256:77458DB9BCC41E3FCE9913662DE50F1B071548C9FC343894A07176DEFE94F28B",
 
-},
+        },
 
 "logo": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_logo.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_logo.png",
 
-"hash": "sha256:336689A74C41848C7B1A09384DB0E06DDAE747FE554B774DD2CF9382537AB457",
+        "hash": "sha256:336689A74C41848C7B1A09384DB0E06DDAE747FE554B774DD2CF9382537AB457",
 
-},
+        },
 
 "symbol": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_symbol.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_symbol.png",
 
-"hash": "sha256:D53CCE48671403029CB1C4C25510428436118AC920A19CC7DD272506F5B9CD24",
+        "hash": "sha256:D53CCE48671403029CB1C4C25510428436118AC920A19CC7DD272506F5B9CD24",
 
-},
+        },
 
 "thumbnail": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_thumbnail.jpg",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_thumbnail.jpg",
 
-"hash": "sha256:C322F8007616C6410492EAC4E1C574C3DF8E20B0A488D097DCBCC450996CD6CB",
+        "hash": "sha256:C322F8007616C6410492EAC4E1C574C3DF8E20B0A488D097DCBCC450996CD6CB",
 
-},
+        },
 
 "details": [
 
-{
+        {
 
-"name": "Edition",
+        "name": "Edition",
 
-"value": "Ubuntu 20.04 LTS Desktop",
+        "value": "Ubuntu 20.04 LTS Desktop",
 
-},
+        },
 
 {
 

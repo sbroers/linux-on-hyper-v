@@ -6,65 +6,65 @@
 
 {
 
-"name": "Kali Linux 2020.02",
+        "name": "Kali Linux 2020.02",
+        
+        "publisher": "sbroers",
+        
+        "lastUpdated": "2020-05-13T10:00:00Z",
 
-"publisher": "sbroers",
+        "version": "2020.01",
 
-"lastUpdated": "2020-05-13T10:00:00Z",
+        "locale": "de-DE",
 
-"version": "2020.01",
+        "description": [
 
-"locale": "de-DE",
+                  "Kali Linux 2020.02",
 
-"description": [
+                  "\r\n\r\n",
 
-"Kali Linux 2020.02",
+                  "Kali Linux ist eine auf Debian basierende Linux-Distribution, die vor allem Programme für Penetrationstests und digitale Forensik umfasst. Kali Linux richtet sich in erster Linie an professionelle und fortgeschrittene Anwender.",
 
-"\r\n\r\n",
+                  "\r\n\r\n",
 
-"Kali Linux ist eine auf Debian basierende Linux-Distribution, die vor allem Programme für Penetrationstests und digitale Forensik umfasst. Kali Linux richtet sich in erster Linie an professionelle und fortgeschrittene Anwender.",
-
-"\r\n\r\n",
-
-],
+            ],
 
 "config": {
 
-"secureBoot": "false",
-"enhancedSessionTransportType": "HvSocket",
+        "secureBoot": "false",
+        "enhancedSessionTransportType": "HvSocket",
 },
 
 "requirements": { "diskSpace": "10000000000"},
 
 "disk": {
 
-"uri": "file://C:/Hyper-V_Gallery/kali20/kali20.vhdx",
+        "uri": "file://C:/Hyper-V_Gallery/kali20/kali20.vhdx",
 
-"hash": "sha256:70C1168EAB9AFB199FA3F032D3FAB6A4CE166F3D5D799FC92C1602CBA80C8CF7",
+        "hash": "sha256:70C1168EAB9AFB199FA3F032D3FAB6A4CE166F3D5D799FC92C1602CBA80C8CF7",
 
 },
 
 "logo": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_logo.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_logo.png",
 
-"hash": "sha256:0399F5794D6426A520EF8CAEB638181BAF46DF637F2D8C612E63ECF1023BBB20",
+        "hash": "sha256:0399F5794D6426A520EF8CAEB638181BAF46DF637F2D8C612E63ECF1023BBB20",
 
 },
 
 "symbol": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_symbol.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_symbol.png",
 
-"hash": "sha256:6A0666299341F24F30A656EAFD6920CF752D9019DEC204CDCFAA80FA27129CC6",
+        "hash": "sha256:6A0666299341F24F30A656EAFD6920CF752D9019DEC204CDCFAA80FA27129CC6",
 
 },
 
 "thumbnail": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_thumbnail.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/kali/kali20_thumbnail.png",
 
-"hash": "sha256:BC0D60750C08B02F948BE8A6A61B1900EE6845371DE2CA688BE1A3553188E39A",
+        "hash": "sha256:BC0D60750C08B02F948BE8A6A61B1900EE6845371DE2CA688BE1A3553188E39A",
 
 },
 

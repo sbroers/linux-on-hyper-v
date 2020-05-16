@@ -6,66 +6,66 @@
 
 {
 
-"name": "Ubuntu 20.04 LTS Server",
+        "name":         "Ubuntu 20.04 LTS Server",
 
-"publisher": "sbroers",
+        "publisher":    "sbroers",
 
-"lastUpdated": "2020-05-12T10:00:00Z",
+        "lastUpdated":  "2020-05-12T10:00:00Z",
 
-"version": "20.04",
+        "version":      "20.04",
 
-"locale": "de-DE",
+        "locale":       "de-DE",
 
-"description": [
+        "description": [
 
-"Ubuntu 20.04 LTS Server.",
+                        "Ubuntu 20.04 LTS Server.",
 
-"\r\n\r\n",
+                        "\r\n\r\n",
 
-"Ubuntu is used by thousands of development teams around the world because of its versatility, reliability and extensive developer libraries. ",
+                        "Ubuntu is used by thousands of development teams around the world because of its versatility, reliability and extensive developer libraries. ",
 
-"\r\n\r\n",
+                        "\r\n\r\n",
 
 ],
 
 "config": {
 
-"secureBoot": "false",
-},
+        "secureBoot":   "false",
+          },
 
 "requirements": { "diskSpace": "10000000000"},
 
 "disk": {
 
-"uri": "https://mirrors.advancedhosters.com/ubuntu-releases/20.04/ubuntu-20.04-live-server-amd64.iso",
+        "uri":          "https://mirrors.advancedhosters.com/ubuntu-releases/20.04/ubuntu-20.04-live-server-amd64.iso",
 
-"hash": "sha256:CAF3FD69C77C439F162E2BA6040E9C320C4FF0D69AAD1340A514319A9264DF9F",
+        "hash":         "sha256:CAF3FD69C77C439F162E2BA6040E9C320C4FF0D69AAD1340A514319A9264DF9F",
 
-"archiveRelativePath": "ubuntu-20.04-live-server-amd64.iso"
+        "archiveRelativePath":      "ubuntu-20.04-live-server-amd64.iso"
 
 },
 
 "logo": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_logo.png",
+        "uri":          "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_logo.png",
 
-"hash": "sha256:336689A74C41848C7B1A09384DB0E06DDAE747FE554B774DD2CF9382537AB457",
+        "hash":         "sha256:336689A74C41848C7B1A09384DB0E06DDAE747FE554B774DD2CF9382537AB457",
 
 },
 
 "symbol": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_symbol.png",
+        "uri":          "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/ubuntu_symbol.png",
 
-"hash": "sha256:D53CCE48671403029CB1C4C25510428436118AC920A19CC7DD272506F5B9CD24",
+        "hash":         "sha256:D53CCE48671403029CB1C4C25510428436118AC920A19CC7DD272506F5B9CD24",
 
 },
 
 "thumbnail": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/us2004_thumbnail.png",
+        "uri":          "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/ubuntu/us2004_thumbnail.png",
 
-"hash": "sha256:37373C0EB987DC5BF6CC1EE9316C11E05ABF513DA07FB746EBD846D0594CC351",
+        "hash":         "sha256:37373C0EB987DC5BF6CC1EE9316C11E05ABF513DA07FB746EBD846D0594CC351",
 
 },
 
@@ -73,25 +73,25 @@
 
 {
 
-"name": "Edition",
+        "name":        "Edition",
 
-"value": "Ubuntu 20.04 LTS Server",
-
-},
-
-{
-
-"name": "Copyright",
-
-"value": "Copyright (c) Canonical Ltd.",
+        "value":       "Ubuntu 20.04 LTS Server",
 
 },
 
 {
 
-"name": "License",
+"name":        "Copyright",
 
-"value": "https://ubuntu.com/licensing",
+"value":       "Copyright (c) Canonical Ltd.",
+
+},
+
+{
+
+"name":        "License",
+
+"value":       "https://ubuntu.com/licensing",
 
 },
 

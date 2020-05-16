@@ -30,43 +30,43 @@
 
 "config": {
 
-"secureBoot": "false",
-"enhancedSessionTransportType": "HvSocket",
-},
+        "secureBoot": "false",
+        "enhancedSessionTransportType": "HvSocket",
+          },
 
 "requirements": { "diskSpace": "10000000000"},
 
 "disk": {
 
-"uri": "http://mirror.rackspace.com/archlinux/iso/2020.05.01/archlinux-2020.05.01-x86_64.iso",
+        "uri": "http://mirror.rackspace.com/archlinux/iso/2020.05.01/archlinux-2020.05.01-x86_64.iso",
 
-"hash": "sha256:0B71A04ECD9CEEFA72683948BB971DC8C77A92C0EDBEAC5647B98A6E47B5C203",
+        "hash": "sha256:0B71A04ECD9CEEFA72683948BB971DC8C77A92C0EDBEAC5647B98A6E47B5C203",
 
-"archiveRelativePath": "archlinux-2020.05.01-x86_64.iso"
+        "archiveRelativePath": "archlinux-2020.05.01-x86_64.iso"
 
 },
 
 "logo": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_logo.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_logo.png",
 
-"hash": "sha256:D0221276BC214FCD645AB58C55816467C2ADDFF4E3D899BCE85DA3E6B0D770D2",
+        "hash": "sha256:D0221276BC214FCD645AB58C55816467C2ADDFF4E3D899BCE85DA3E6B0D770D2",
 
 },
 
 "symbol": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_symbol.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_symbol.png",
 
-"hash": "sha256:B06B3EB85F4E9DD2D66FA334C1F318494A6BEB861A15DE637F9BFD28FA4FBD3D",
+        "hash": "sha256:B06B3EB85F4E9DD2D66FA334C1F318494A6BEB861A15DE637F9BFD28FA4FBD3D",
 
 },
 
 "thumbnail": {
 
-"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_thumbnail.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_thumbnail.png",
 
-"hash": "sha256:F1ADEE47FF89ADF5AC4BA6450B7D4F557E2B2DE0E88BEE322202FBAB7C7CCC04",
+        "hash": "sha256:F1ADEE47FF89ADF5AC4BA6450B7D4F557E2B2DE0E88BEE322202FBAB7C7CCC04",
 
 },
 
@@ -74,9 +74,9 @@
 
 {
 
-"name": "Edition",
+        "name": "Edition",
 
-"value": "archlinux 2020.05.01",
+        "value": "archlinux 2020.05.01",
 
 },
 
