@@ -5,12 +5,17 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+# add backports repo
+
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
 apt update
-apt install hyperv-daemons
 
 sudo apt install -t buster-backports linux-image-amd64
 sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
+
+# install hyper-v daemons and activate them
+
+apt install hyperv-daemons
 
 echo "# Hyper-V Modules" >> /etc/initramfs-tools/modules
 echo "hv_vmbus" >> /etc/initramfs-tools/modules
@@ -26,6 +31,8 @@ cp /boot/efi/EFI/BOOT/shimx64.efi /boot/efi/EFI/BOOT/bootx64.efi
 export PATH=/sbin:$PATH
 
 update-initramfs -u
+
+# dirty way to use ubuntu packages instead of compile it from source
 
 wget http://de.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg8-empty/libjpeg8_8c-2ubuntu8_amd64.deb
 wget http://de.archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg-turbo/libjpeg-turbo8_2.0.3-0ubuntu1_amd64.deb
