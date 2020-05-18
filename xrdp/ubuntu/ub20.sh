@@ -94,7 +94,41 @@ systemctl start xrdp
 #########
 # audio
 #
-# sed -i "s/Exec=start-pulseaudio-x11/Exec=pulseaudio -k/" /etc/xdg/autostart/pulseaudio.desktop
+sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename' main restricted'
+sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename' restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-updates restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-backports main restricted universe multiverse'
+sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-security main restricted universe main multiverse'
+sudo apt-get update
+
+# Step 2 - Install Some PreReqs
+sudo apt-get install git libpulse-dev autoconf m4 intltool build-essential dpkg-dev libtool libsndfile-dev libcap-dev -y libjson-c-dev
+sudo apt build-dep pulseaudio -y
+
+# Step 3 -  Download pulseaudio source in /tmp directory - Do not forget to enable source repositories
+cd /tmp
+sudo apt source pulseaudio
+
+# Step 4 - Compile
+pulsever=$(pulseaudio --version | awk '{print $2}')
+cd /tmp/pulseaudio-$pulsever
+sudo ./configure
+
+# step 5 - Create xrdp sound modules
+sudo git clone https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
+cd pulseaudio-module-xrdp
+sudo ./bootstrap 
+sudo ./configure PULSE_DIR="/tmp/pulseaudio-$pulsever"
+sudo make
+
+#Step 6 copy files to correct location (as defined in /etc/xrdp/pulse/default.pa)
+cd /tmp/pulseaudio-$pulsever/pulseaudio-module-xrdp/src/.libs
+sudo install -t "/var/lib/xrdp-pulseaudio-installer" -D -m 644 *.so
+sudo install -t "/usr/lib/pulse-$pulsever/modules" -D -m 644 *.so
+echo
+
+}
+sed -i "s/Exec=start-pulseaudio-x11/Exec=pulseaudio -k/" /etc/xdg/autostart/pulseaudio.desktop
 #
 
 #
