@@ -90,6 +90,13 @@ EOF
 systemctl daemon-reload
 systemctl start xrdp
 
+
+#########
+# audio
+#
+# sed -i "s/Exec=start-pulseaudio-x11/Exec=pulseaudio -k/" /etc/xdg/autostart/pulseaudio.desktop
+#
+
 #
 # End XRDP
 ###############################################################################
