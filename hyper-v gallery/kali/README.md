@@ -1,4 +1,4 @@
-OneDrive Link is broken... fixing it tomorrow
+OneDrive Link is broken... i have to use another mirror...
 
 This JSON File set's up an Kali Linux VM 2020.02
 
