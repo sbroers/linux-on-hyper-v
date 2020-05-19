@@ -48,25 +48,25 @@
 
 "logo": {
 
-        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_logo.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/manjaro/manjaro_logo.png",
 
-        "hash": "sha256:D0221276BC214FCD645AB58C55816467C2ADDFF4E3D899BCE85DA3E6B0D770D2",
+        "hash": "sha256:0911B6F277F9D6FB900C26D162EA9C81D9E563AC60448B44661DAB70B4CFA0B8",
 
 },
 
 "symbol": {
 
-        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_symbol.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/manjaro/manjaro_symbol.png",
 
-        "hash": "sha256:B06B3EB85F4E9DD2D66FA334C1F318494A6BEB861A15DE637F9BFD28FA4FBD3D",
+        "hash": "sha256:21DA25B54E41A978D1E965222F66B4AD5E3C0A81755DFA90FF41E74B93D4699A",
 
 },
 
 "thumbnail": {
 
-        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/arch/arch_thumbnail.png",
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/manjaro/manjaro_thumbnail.png",
 
-        "hash": "sha256:F1ADEE47FF89ADF5AC4BA6450B7D4F557E2B2DE0E88BEE322202FBAB7C7CCC04",
+        "hash": "sha256:92689A285D5309A6EC68746E35A41AD48022D21DF98D0B18EF39C904135F0B0E",
 
 },
 
