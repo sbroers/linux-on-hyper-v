@@ -6,7 +6,7 @@
 
     {
 
-        "name": "Manjaro linux",
+        "name": "Manjaro linux Test",
 
         "publisher": "sbroers",
 
@@ -38,7 +38,7 @@
 
 "disk": {
 
-        "uri": "http://mirror.rackspace.com/archlinux/iso/2020.05.01/archlinux-2020.05.01-x86_64.iso",
+        "uri": "https://osdn.dl.osdn.net/linux-on-hyper-v/73035/archlinux-2020.05.01-x86_64.iso.zip",
 
         "hash": "sha256:0B71A04ECD9CEEFA72683948BB971DC8C77A92C0EDBEAC5647B98A6E47B5C203",
 
