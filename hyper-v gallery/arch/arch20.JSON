@@ -38,9 +38,9 @@
 
 "disk": {
 
-        "uri": "https://www.daten-hoster.de/file/download/870034/fUMYJ5aPyxoetWes",
+        "uri": "http://mirror.rackspace.com/archlinux/iso/2020.05.01/archlinux-2020.05.01-x86_64.iso",
 
-        "hash": "sha256:9AA7FA941388088DCB952339AF8BA020E8C2E1112F8847BB59C65F39CDFF3D9C",
+        "hash": "sha256:0B71A04ECD9CEEFA72683948BB971DC8C77A92C0EDBEAC5647B98A6E47B5C203",
 
         "archiveRelativePath": "archlinux-2020.05.01-x86_64.iso"
 
