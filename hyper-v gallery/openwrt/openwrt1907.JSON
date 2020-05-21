@@ -32,13 +32,8 @@
         ],
 
 "config": {
-
-        "Generation": "1",
-        "DynamicMemoryEnabled": "false",
-        
+        "secureBoot": "false",
           },
-
-
 
 "requirements": { "diskSpace": "10000000000"},
 
@@ -46,7 +41,7 @@
 
         "uri": "https://osdn.mirror.liquidtelecom.com/linux-on-hyper-v/73038/OpenWrt19.07.vhdx",
 
-        "hash": "sha256:CB09B460E98A3F8AD49186E67C07AC575F8BF8283DA6A9AE54F65210DE874208",
+        "hash": "sha256:4150604D4A6A6E1B5FECCA11A022CEA060570162DC3684C102469B8A4C54057D",
 
         "archiveRelativePath": "OpenWrt19.07.vhdx"
 
