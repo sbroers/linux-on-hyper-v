@@ -1,0 +1,114 @@
+{
+
+"$schema": "https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/vmgallery/vm-gallery-schema.json",
+
+"images": [
+
+    {
+
+        "name": "OpenWrt 19.07",
+
+        "publisher": "sbroers",
+
+        "lastUpdated": "2020-05-21T10:00:00Z",
+
+        "version": "19.07.3",
+
+        "locale": "de-DE",
+
+        "description": [
+
+        "OpenWrt 19.07.3",
+
+        "\r\n\r\n",
+
+        "OpenWrt (OPEN Wireless RouTer) is an open source project for embedded operating systems based on Linux, primarily used on embedded devices to route network traffic. The main components are Linux, util-linux, musl,[5] and BusyBox. All components have been optimized to be small enough to fit into the limited storage and memory available in home routers. ",
+
+        "\r\n\r\n",
+
+        "User: root",
+        "Password: ",
+
+        ],
+
+"config": {
+
+        "secureBoot": "false",
+        "Generation": "1",
+        "DynamicMemoryEnabled": "false",
+        
+          },
+
+
+
+"requirements": { "diskSpace": "10000000000"},
+
+"disk": {
+
+        "uri": "https://osdn.net/projects/linux-on-hyper-v/downloads/73038/OpenWrt19.07.vhdx/",
+
+        "hash": "sha256:CB09B460E98A3F8AD49186E67C07AC575F8BF8283DA6A9AE54F65210DE874208",
+
+        "archiveRelativePath": "OpenWrt19.07.vhdx"
+
+},
+
+"logo": {
+
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/openwrt/openwrt_logo.png",
+
+        "hash": "sha256:58F814A0D1875158B5CE9DF85FBCA0E1B81B2683C282DEA7C6C4DE865B583EB8",
+
+},
+
+"symbol": {
+
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/openwrt/openwrt_symbol.png",
+
+        "hash": "sha256:7CE39B07B76B2A91D79A29DA16431F750CE02DCCEE4F2F9A64497B3420B04BFE",
+
+},
+
+"thumbnail": {
+
+        "uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/openwrt/openwrt_thumbnail.png",
+
+        "hash": "sha256:3B459B72A4CCD777860AD30EF4793C141BBC8D82752C09630C9E83674021E2CC",
+
+},
+
+"details": [
+
+{
+
+        "name": "Edition",
+
+        "value": "OpenWrt 19.07.3",
+
+},
+
+{
+
+"name": "Copyright",
+
+"value": "Copyright (c) OpenWrt",
+
+},
+
+{
+
+"name": "License",
+
+"value": "https://openwrt.org/license",
+
+},
+
+]
+
+}
+
+,
+
+]
+
+}
