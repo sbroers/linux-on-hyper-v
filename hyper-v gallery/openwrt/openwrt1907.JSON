@@ -33,7 +33,6 @@
 
 "config": {
 
-        "secureBoot": "false",
         "Generation": "1",
         "DynamicMemoryEnabled": "false",
         
