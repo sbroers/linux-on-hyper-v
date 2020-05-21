@@ -38,9 +38,9 @@
 
 "disk": {
 
-        "uri": "file://C:/Hyper-V_Gallery/u2004/u2004.vhdx",
+        "uri": "https://osdn.dl.osdn.net/linux-on-hyper-v/73041/Ubuntu%2020.04%20LTS%20Desktop.vhdx.zip",
 
-        "hash": "sha256:77458DB9BCC41E3FCE9913662DE50F1B071548C9FC343894A07176DEFE94F28B",
+        "hash": "sha256:45c89f657da788109793b945113a95d0bffb0125d3298404671dd0971a772330",
 
         },
 
