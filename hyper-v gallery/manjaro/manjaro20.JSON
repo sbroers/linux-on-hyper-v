@@ -25,6 +25,7 @@
         "Manjaro ist eine auf Arch Linux basierende Linux-Distribution, die in Deutschland, Frankreich und Österreich entwickelt wird. Es ist in erster Linie ein freies Betriebssystem für Personal Computer, welches auf Benutzerfreundlichkeit ausgerichtet ist. Wie seine Basis, Arch Linux, nutzt es ein Rolling-Release-Modell.",
 
         "\r\n\r\n",
+        "User&Password: manjaro",
 
         ],
 
@@ -38,11 +39,11 @@
 
 "disk": {
 
-        "uri": "https://osdn.dl.osdn.net/linux-on-hyper-v/73035/archlinux-2020.05.01-x86_64.iso.zip",
+        "uri": "https://dotsrc.dl.osdn.net/osdn/linux-on-hyper-v/73040/Manjaro.zip",
 
-        "hash": "sha256:0B71A04ECD9CEEFA72683948BB971DC8C77A92C0EDBEAC5647B98A6E47B5C203",
+        "hash": "sha256:f5c130aeb7667d68d4960d0c523087040e19273e17dfef9962505b81f868b280",
 
-        "archiveRelativePath": "archlinux-2020.05.01-x86_64.iso"
+        "archiveRelativePath": "Manjaro.vhdx"
 
 },
 
