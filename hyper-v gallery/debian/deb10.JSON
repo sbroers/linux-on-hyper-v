@@ -38,10 +38,11 @@
 
 "disk": {
 
-        "uri": "file://C:/Hyper-V_Gallery/deb10/deb10.vhdx",
+        "uri": "https://gemmei.ftp.acc.umu.se/mirror/osdn.net/linux-on-hyper-v/73042/debian104.zip",
 
-        "hash": "sha256:A1040B1E9E7BDA1CF6737BE4346AA55DB6C04A6773AD710CB5AA29BC9AEC40EA",
+        "hash": "sha256:6e39396dc3903e78f5b7e73f8d292da7e8b4b6efcf4c203c2693ad17164ef730",
 
+        "archiveRelativePath": "debian104.vhdx"
 },
 
 "logo": {
