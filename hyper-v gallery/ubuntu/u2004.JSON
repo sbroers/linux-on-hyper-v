@@ -40,7 +40,7 @@
 
 "disk": {
 
-        "uri": "https://osdn.mirror.liquidtelecom.com/linux-on-hyper-v/73041/Ubuntu%2020.04%20LTS%20Desktop.vhdx.zip",
+        "uri": "https://mirrors.gigenet.com/OSDN//linux-on-hyper-v/73041/Ubuntu%2020.04%20LTS%20Desktop.vhdx.zip",
 
         "hash": "sha256:45c89f657da788109793b945113a95d0bffb0125d3298404671dd0971a772330",
 
