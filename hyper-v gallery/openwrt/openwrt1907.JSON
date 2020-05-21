@@ -44,7 +44,7 @@
 
 "disk": {
 
-        "uri": "https://osdn.net/projects/linux-on-hyper-v/downloads/73038/OpenWrt19.07.vhdx/",
+        "uri": "https://osdn.mirror.liquidtelecom.com/linux-on-hyper-v/73038/OpenWrt19.07.vhdx",
 
         "hash": "sha256:CB09B460E98A3F8AD49186E67C07AC575F8BF8283DA6A9AE54F65210DE874208",
 
