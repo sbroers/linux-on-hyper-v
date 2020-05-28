@@ -1,9 +1,6 @@
 #!/bin/bash
 
-sudo zypper install xrdp
-
-sudo systemctl stop xrdp
-sudo systemctl stop xrdp-sesman
+sudo yum install xrdp xorgxrdp
 
 # Configure the installed XRDP ini files.
 # use vsock transport.
