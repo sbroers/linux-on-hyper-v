@@ -1,0 +1,107 @@
+{
+
+"$schema": "https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/vmgallery/vm-gallery-schema.json",
+
+"images": [
+
+    {
+
+        "name": "openSUSE Leap 15.2",
+
+        "publisher": "sbroers",
+
+        "lastUpdated": "2020-05-15T10:00:00Z",
+
+        "version": "15.2",
+
+        "locale": "de-DE",
+
+        "description": [
+
+        "openSUSE Leap 15.2",
+
+        "\r\n\r\n",
+
+        "openSUSE, ehemals SUSE Linux und SuSE Linux Professional, ist eine Linux-Distribution der SUSE GmbH. Sie wird insbesondere in Deutschland und den USA verbreitet eingesetzt.",
+
+        "\r\n\r\n",
+
+        ],
+
+"config": {
+
+"secureBoot": "false",
+"enhancedSessionTransportType": "HvSocket",
+},
+
+"requirements": { "diskSpace": "10000000000"},
+
+"disk": {
+
+"uri": "https://download.opensuse.org/distribution/leap/15.2/iso/openSUSE-Leap-15.2-DVD-x86_64-Current.iso",
+
+"hash": "sha256:0914D310F8A43ADBEC693EF9D2772376D0B9BA76ECD0649413FF5E1D82C3BC00",
+
+"archiveRelativePath": "openSUSE-Leap-15.2-DVD-x86_64-Current.iso"
+
+},
+
+"logo": {
+
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/suse/opensuse15_logo.png",
+
+"hash": "sha256:FA9D600389FC720B21D97FD3B438E32C0C26280C761D35D9CEA591C6252F12DA",
+
+},
+
+"symbol": {
+
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/suse/opensuse15_symbol.png",
+
+"hash": "sha256:69B5AF56972398DFB43902CF86D3F1DC107E7ECAEB82AFBAE6F92C1CCC49FE70",
+
+},
+
+"thumbnail": {
+
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/suse/opensuse15_thumbnail.png",
+
+"hash": "sha256:F5459C1FA099861EF4601A91BD867EFB061B23CFD3AD776DCED1CF53A464E339",
+
+},
+
+"details": [
+
+{
+
+"name": "Edition",
+
+"value": "openSUSE Leap 15.2",
+
+},
+
+{
+
+"name": "Copyright",
+
+"value": "Copyright (c) openSUSE-Projekt",
+
+},
+
+{
+
+"name": "License",
+
+"value": "https://en.opensuse.org/openSUSE:License",
+
+},
+
+]
+
+}
+
+,
+
+]
+
+}
