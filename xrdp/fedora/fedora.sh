@@ -40,10 +40,36 @@ ResultInactive=no
 ResultActive=yes
 EOF
 
+# Audio Install
+sudo yum groupinstall "Development Tools"
+sudo yum install libcap-devel.x86_64 pulseaudio-libs-devel.x86_64 libsndfile-devel.x86_64 libcap-devel.x86_64 jansson.x86_64 
+sudo yum install rpmdevtools yum-utils
+sudo rpmdev-setuptree
+sudo dnf builddep pulseaudio -y
+
+yumdownloader --source pulseaudio
+rpm --install pulseaudio*.src.rpm
+
+pulseaudio --version > /tmp/p123
+sed -i -e 's/-rebootstrapped//g' /tmp/p123
+sed -i -e 's/pulseaudio //g' /tmp/p123
+pulsever=$(cat /tmp/p123)
+PULSE_DIR=~/rpmbuild/BUILD/pulseaudio-$pulsever
+git clone https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
+cd pulseaudio-module-xrdp
+./bootstrap && ./configure PULSE_DIR=~/rpmbuild/BUILD/pulseaudio-$pulsever
+make
+
+rpmbuild -bb --noclean ~/rpmbuild/SPECS/pulseaudio.spec
+make
+make install
+
 # reconfigure the service
 sudo systemctl enable xrdp
-sudo systemctl enable xrdp-sesmansudo systemctl daemon-reload
+sudo systemctl enable xrdp-sesman
+sudo systemctl daemon-reload
 sudo systemctl start xrdp
+sudo systemctl start xrdp-sesman
 
 
 

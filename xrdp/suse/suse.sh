@@ -45,9 +45,10 @@ EOF
 
 # reconfigure the service
 sudo systemctl enable xrdp
-sudo systemctl enable xrdp-sesmansudo systemctl daemon-reload
+sudo systemctl enable xrdp-sesman
+sudo systemctl daemon-reload
 sudo systemctl start xrdp
-
+sudo systemctl start xrdp-sesman
 
 
 echo "Install is complete."

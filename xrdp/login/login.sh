@@ -3,8 +3,8 @@
 
 #cd ~/Downloads
 #cd $Dwnload
-cd /tmp
-wget https://github.com/sbroers/linux-on-hyper-v/blob/master/xrdp/griffon_logo_xrdp.zip
+#cd /tmp
+wget https://osdn.dl.osdn.net/linux-on-hyper-v/73077/griffon_logo_xrdp.bmp
 unzip griffon_logo_xrdp.zip
 
 #Check where to copy the logo file
