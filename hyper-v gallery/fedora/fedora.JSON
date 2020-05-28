@@ -40,9 +40,9 @@
 
 "uri": "https://download.opensuse.org/distribution/leap/15.2/iso/openSUSE-Leap-15.2-DVD-x86_64-Current.iso",
 
-"hash": "sha256:0914D310F8A43ADBEC693EF9D2772376D0B9BA76ECD0649413FF5E1D82C3BC00",
+"hash": "sha256:086E5F5888634C7AFE96DB6DDDE2CFE1B59F9BD32946AD9F616A953809BB40DE",
 
-"archiveRelativePath": "openSUSE-Leap-15.2-DVD-x86_64-Current.iso"
+"archiveRelativePath": "fedora.vhdx"
 
 },
 
