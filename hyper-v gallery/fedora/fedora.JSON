@@ -1,0 +1,107 @@
+{
+
+"$schema": "https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/live/hyperv-tools/vmgallery/vm-gallery-schema.json",
+
+"images": [
+
+    {
+
+        "name": "Fedora Workstation 32",
+
+        "publisher": "sbroers",
+
+        "lastUpdated": "2020-05-15T10:00:00Z",
+
+        "version": "32.0",
+
+        "locale": "de-DE",
+
+        "description": [
+
+        "Fedora 32",
+
+        "\r\n\r\n",
+
+        "Fedora ist eine RPM-basierte Linux-Distribution. Ziel der Entwickler der Distribution ist es, Freie Software zu fördern und ein Betriebssystem für eine möglichst vielfältige Zielgruppe zu gestalten.",
+
+        "\r\n\r\n",
+
+        ],
+
+"config": {
+
+"secureBoot": "false",
+"enhancedSessionTransportType": "HvSocket",
+},
+
+"requirements": { "diskSpace": "10000000000"},
+
+"disk": {
+
+"uri": "https://download.opensuse.org/distribution/leap/15.2/iso/openSUSE-Leap-15.2-DVD-x86_64-Current.iso",
+
+"hash": "sha256:0914D310F8A43ADBEC693EF9D2772376D0B9BA76ECD0649413FF5E1D82C3BC00",
+
+"archiveRelativePath": "openSUSE-Leap-15.2-DVD-x86_64-Current.iso"
+
+},
+
+"logo": {
+
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/fedora/fedora_logo.png",
+
+"hash": "sha256:B317B9A32102081A2F04A1372310BD4F983BBD6D38D71EEBFC57FC2B5B72C53B",
+
+},
+
+"symbol": {
+
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/fedora/fedora_symbol.png",
+
+"hash": "sha256:26B7E938097725AF87C0EDF07BA6EFBF344A7FA0FDEB710F22FBAA28505AFD58",
+
+},
+
+"thumbnail": {
+
+"uri": "https://github.com/sbroers/linux-on-hyper-v/raw/master/hyper-v%20gallery/fedora/fedora_thumbnail.png",
+
+"hash": "sha256:3CED698518CBD98EA63A0E424C8D095AC53F47BBCCCC58B2659C98DC3599BAEB",
+
+},
+
+"details": [
+
+{
+
+"name": "Edition",
+
+"value": "Fedora Workstation 32",
+
+},
+
+{
+
+"name": "Copyright",
+
+"value": "Copyright (c) The Fedora Project",
+
+},
+
+{
+
+"name": "License",
+
+"value": "https://fedoraproject.org/wiki/Licensing:Main",
+
+},
+
+]
+
+}
+
+,
+
+]
+
+}
