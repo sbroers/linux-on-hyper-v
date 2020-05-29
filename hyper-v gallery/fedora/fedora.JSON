@@ -38,9 +38,9 @@
 
 "disk": {
 
-"uri": "https://download.opensuse.org/distribution/leap/15.2/iso/openSUSE-Leap-15.2-DVD-x86_64-Current.iso",
+"uri": "https://gensho.ftp.acc.umu.se/mirror/osdn.net/linux-on-hyper-v/73082/fedora.zip",
 
-"hash": "sha256:086E5F5888634C7AFE96DB6DDDE2CFE1B59F9BD32946AD9F616A953809BB40DE",
+"hash": "sha256:086e5f5888634c7afe96db6ddde2cfe1b59f9bd32946ad9f616a953809bb40de",
 
 "archiveRelativePath": "fedora.vhdx"
 
