@@ -38,9 +38,9 @@
 
 "disk": {
 
-        "uri": "https://caesar.ftp.acc.umu.se/mirror/osdn.net/linux-on-hyper-v/73039/kali2020.02.vhdx.zip",
+        "uri": "https://osdn.dl.osdn.net/linux-on-hyper-v/73039/kali2020.02.vhdx.zip",
 
-        "hash": "sha256:0c2c550c6115d6d80e591c090f0ba01b64cdeab7a517cbf6cd12a73dc0b0b397",
+        "hash": "sha256:a6d3d1dcfdf898290e6e969ac5d26786eb49e64619a42f70d904440627f46200",
 
         "archiveRelativePath": "kali2020.02.vhdx",
 
