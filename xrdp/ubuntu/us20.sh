@@ -21,7 +21,6 @@ sed -i_orig -e 's/crypt_level=high/crypt_level=none/g' /etc/xrdp/xrdp.ini
 sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
 
 wget https://osdn.dl.osdn.net/linux-on-hyper-v/73077/griffon_logo_xrdp.bmp
-unzip griffon_logo_xrdp.zip
 
 #Check where to copy the logo file
 if [ -d "/usr/local/share/xrdp" ] 
