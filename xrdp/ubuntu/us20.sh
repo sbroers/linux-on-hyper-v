@@ -92,7 +92,7 @@ sudo install -t "/var/lib/xrdp-pulseaudio-installer" -D -m 644 *.so
 sudo install -t "/usr/lib/pulse-$pulsever/modules" -D -m 644 *.so
 echo
 
-}
+
 sed -i "s/Exec=start-pulseaudio-x11/Exec=pulseaudio -k/" /etc/xdg/autostart/pulseaudio.desktop
 #
 
