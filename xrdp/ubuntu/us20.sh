@@ -1,11 +1,8 @@
 #!/bin/bash
 
-# XRDP
-#
-
 # Install hv_kvp utils
-apt install -y linux-tools-virtual${HWE}
-apt install -y linux-cloud-tools-virtual${HWE}
+apt install -y linux-tools-virtual
+apt install -y linux-cloud-tools-virtual
 
 # Install the xrdp service so we have the auto start behavior
 apt install -y xrdp
@@ -59,11 +56,11 @@ systemctl start xrdp
 #########
 # audio
 #
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename' main restricted'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename' restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-updates restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-backports main restricted universe multiverse'
-sudo apt-add-repository -s 'deb http://be.archive.ubuntu.com/ubuntu/ '$codename'-security main restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal main restricted'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-updates restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-security main restricted universe main multiverse'
 sudo apt-get update
 
 # Step 2 - Install Some PreReqs
