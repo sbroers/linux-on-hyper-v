@@ -36,4 +36,4 @@ while true
       esac
 done
 
-echo "Die GUI $GUI, wurde für xRDP eingestellt."
+echo "Die GUI: $GUI, wurde für xRDP eingestellt."
