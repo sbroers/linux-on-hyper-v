@@ -11,39 +11,29 @@ while true
     echo "[3] KDE Plasma"
     echo "[4] MATE"
     echo "[5] Cinnamon"
-    echo "[6] LXDE"
-
+    
     read -p "Eingabe:" gui
 
       case "$gui" in
 
         1) echo "gnome-session" > ~/.xsession
-        GUI="Gnome 3"
-        break
-        ;;
+           GUI="Gnome 3"
+           break ;;
         2) echo "startxfce4" > ~/.xsession
-        GUI="Xfce"
-        break
-        ;;
+           GUI="Xfce"
+           break ;;
         3) echo "startplasma-x11" > ~/.xsession
-        GUI="KDE Plasma"
-        break
-        ;;
+           GUI="KDE Plasma"
+           break ;;
         4) echo "mate-session" > ~/.xsession
-        GUI="MATE"
-        break
-        ;;
+           GUI="MATE"
+           break ;;
         5) echo "cinnamon" > ~/.xsession
-        GUI="Cinnamon"
-        break
-        ;;
-        6) echo "startlxde" > ~/.xsession
-        GUI="Lxde"
-        break
-        ;;
+           GUI="Cinnamon"
+           break ;;
         *) echo "Geben Sie 1-6 ein! $Eingabe ist eine ungültige Eingabe!"
-        break
-        ;;
+           break ;;
       esac
+done
 
 echo "Die GUI $GUI, wurde für xRDP eingestellt."
