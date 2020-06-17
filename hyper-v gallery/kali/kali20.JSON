@@ -32,7 +32,7 @@
 
         "secureBoot": "false",
         "enhancedSessionTransportType": "HvSocket",
-},
+        },
 
 "requirements": { "diskSpace": "10000000000"},
 
