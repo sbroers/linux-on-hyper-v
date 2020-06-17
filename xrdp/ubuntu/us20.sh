@@ -1,32 +1,8 @@
 #!/bin/bash
 
-HWE=""
-#HWE="-hwe-20.04"
-
-###############################################################################
-# Update our machine to the latest code if we need to.
-#
-
-if [ "$(id -u)" -ne 0 ]; then
-    echo 'This script must be run with root privileges' >&2
-    exit 1
-fi
-
-apt update && apt upgrade -y
-
-if [ -f /var/run/reboot-required ]; then
-    echo "A reboot is required in order to proceed with the install." >&2
-    echo "Please reboot and re-run this script to finish the install." >&2
-    exit 1
-fi
-
-###############################################################################
-# XRDP
-#
-
 # Install hv_kvp utils
-apt install -y linux-tools-virtual${HWE}
-apt install -y linux-cloud-tools-virtual${HWE}
+apt install -y linux-tools-virtual
+apt install -y linux-cloud-tools-virtual
 
 # Install the xrdp service so we have the auto start behavior
 apt install -y xrdp
@@ -44,19 +20,23 @@ sed -i_orig -e 's/crypt_level=high/crypt_level=none/g' /etc/xrdp/xrdp.ini
 # disable bitmap compression since its local its much faster
 sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
 
-# Add script to setup the ubuntu session properly
-if [ ! -e /etc/xrdp/startubuntu.sh ]; then
-cat >> /etc/xrdp/startubuntu.sh << EOF
-#!/bin/sh
-export GNOME_SHELL_SESSION_MODE=ubuntu
-export XDG_CURRENT_DESKTOP=ubuntu:GNOME
-exec /etc/xrdp/startwm.sh
-EOF
-chmod a+x /etc/xrdp/startubuntu.sh
-fi
+wget https://osdn.dl.osdn.net/linux-on-hyper-v/73077/griffon_logo_xrdp.bmp
 
-# use the script to setup the ubuntu session
-sed -i_orig -e 's/startwm/startubuntu/g' /etc/xrdp/sesman.ini
+#Check where to copy the logo file
+if [ -d "/usr/local/share/xrdp" ] 
+then
+    echo "Directory /path/to/dir exists." 
+	sudo cp griffon_logo_xrdp.bmp /usr/local/share/xrdp
+    sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/local\/share\/xrdp\/griffon_logo_xrdp.bmp/g' /etc/xrdp/xrdp.ini
+else
+    sudo cp griffon_logo_xrdp.bmp /usr/share/xrdp
+	sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/griffon_logo_xrdp.bmp/g' /etc/xrdp/xrdp.ini
+fi
+sudo sed -i 's/#ls_title=My Login Title/ls_title=Enter User and Password/' /etc/xrdp/xrdp.ini
+
+sudo sed -i 's/ls_bg_color=dedede/ls_bg_color=ffffff/' /etc/xrdp/xrdp.ini
+sudo sed -i 's/ls_logo_x_pos=55/ls_logo_x_pos=0/' /etc/xrdp/xrdp.ini
+sudo sed -i 's/ls_logo_y_pos=50/ls_logo_y_pos=5/' /etc/xrdp/xrdp.ini
 
 # rename the redirected drives to 'shared-drives'
 sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=shared-drives/g' /etc/xrdp/sesman.ini
@@ -94,11 +74,11 @@ systemctl start xrdp
 #########
 # audio
 #
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ '$codename' main restricted'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ '$codename' restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ '$codename'-updates restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ '$codename'-backports main restricted universe multiverse'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ '$codename'-security main restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal main restricted'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-updates restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-security main restricted universe main multiverse'
 sudo apt-get update
 
 # Step 2 - Install Some PreReqs
