@@ -1,31 +1,49 @@
 #!/bin/bash
-
 # GUI Switch for xRDP
+unset gui
+unset GUI
 
-echo "Wählen Sie die GUI aus, die Sie für xRDP verwenden möchten:"
-echo "[1] Gnome 3"
-echo "[2] Xfce"
-echo "[3] KDE"
-echo "[4] MATE"
-echo "[5] Cinnamon"
-echo "[6] LXDE"
+while true
+  do
+    echo "Wählen Sie die GUI aus, die Sie für xRDP verwenden möchten:"
+    echo "[1] Gnome 3"
+    echo "[2] Xfce"
+    echo "[3] KDE Plasma"
+    echo "[4] MATE"
+    echo "[5] Cinnamon"
+    echo "[6] LXDE"
 
-read -p "Eingabe:" gui
+    read -p "Eingabe:" gui
 
-case "$gui" in
+      case "$gui" in
 
-     1) echo "gnome-session" > ~/.xsession
-     ;;
-     2) echo "startxfce4" > ~/.xsession
-     ;;
-     3) echo "startplasma-x11" > ~/.xsession
-     ;;
-     4) echo "mate-session" > ~/.xsession
-     ;;
-     5) echo "cinnamon" > ~/.xsession
-     ;;
-     6) echo "startlxde" > ~/.xsession
-     ;;
-esac
+        1) echo "gnome-session" > ~/.xsession
+        GUI="Gnome 3"
+        break
+        ;;
+        2) echo "startxfce4" > ~/.xsession
+        GUI="Xfce"
+        break
+        ;;
+        3) echo "startplasma-x11" > ~/.xsession
+        GUI="KDE Plasma"
+        break
+        ;;
+        4) echo "mate-session" > ~/.xsession
+        GUI="MATE"
+        break
+        ;;
+        5) echo "cinnamon" > ~/.xsession
+        GUI="Cinnamon"
+        break
+        ;;
+        6) echo "startlxde" > ~/.xsession
+        GUI="Lxde"
+        break
+        ;;
+        *) echo "Geben Sie 1-6 ein! $Eingabe ist eine ungültige Eingabe!"
+        break
+        ;;
+      esac
 
-echo "Die gewählte GUI, wurde für xRDP eingestellt."
+echo "Die GUI $GUI, wurde für xRDP eingestellt."
