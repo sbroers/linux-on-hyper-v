@@ -7,7 +7,7 @@ unset GUI
 while true
   do
     echo "Wählen Sie die GUI aus, die Sie für xRDP verwenden möchten:"
-    echo ""
+    echo " "
     echo "[1] Gnome 3"
     echo "[2] Xfce"
     echo "[3] KDE Plasma"
