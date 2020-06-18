@@ -1,5 +1,6 @@
 #!/bin/bash
 # GUI Switch for xRDP
+# c 2020 sbroers
 unset gui
 unset GUI
 
