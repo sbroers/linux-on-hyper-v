@@ -31,7 +31,7 @@ while true
         5) echo "cinnamon" > ~/.xsession
            GUI="Cinnamon"
            break ;;
-        *) echo "Geben Sie 1-5 ein! $Eingabe ist eine ungültige Eingabe!"
+        *) echo "Geben Sie 1-5 ein! $gui ist eine ungültige Eingabe!"
            ;;
       esac
 done
