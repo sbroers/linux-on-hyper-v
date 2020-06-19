@@ -40,6 +40,26 @@ ResultInactive=no
 ResultActive=yes
 EOF
 
+cat <<EOF | \
+  sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-NetworkManager.pkla
+[Netowrkmanager]
+Identity=unix-group:sudo
+Action=org.freedesktop.NetworkManager.network-control
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+EOF
+
+cat <<EOF | \
+  sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-packagekit.pkla
+[Netowrkmanager]
+Identity=unix-group:sudo
+Action=org.freedesktop.packagekit.system-sources-refresh
+ResultAny=yes
+ResultInactive=auth_admin
+ResultActive=yes
+EOF
+
 # Audio Install
 sudo yum groupinstall "Development Tools"
 sudo yum install libcap-devel.x86_64 pulseaudio-libs-devel.x86_64 libsndfile-devel.x86_64 libcap-devel.x86_64 jansson.x86_64 

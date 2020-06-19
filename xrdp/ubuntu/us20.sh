@@ -59,17 +59,36 @@ fi
 # Configure the policy xrdp session
 cat > /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla <<EOF
 [Allow Colord all Users]
-Identity=unix-user:*
+Identity=unix-group:sudo
 Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
 ResultAny=no
 ResultInactive=no
 ResultActive=yes
 EOF
 
+cat <<EOF | \
+  sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-NetworkManager.pkla
+[Netowrkmanager]
+Identity=unix-group:sudo
+Action=org.freedesktop.NetworkManager.network-control
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+EOF
+
+cat <<EOF | \
+  sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-packagekit.pkla
+[Netowrkmanager]
+Identity=unix-group:sudo
+Action=org.freedesktop.packagekit.system-sources-refresh
+ResultAny=yes
+ResultInactive=auth_admin
+ResultActive=yes
+EOF
+
 # reconfigure the service
 systemctl daemon-reload
 systemctl start xrdp
-
 
 #########
 # audio
@@ -109,6 +128,10 @@ echo
 
 
 sed -i "s/Exec=start-pulseaudio-x11/Exec=pulseaudio -k/" /etc/xdg/autostart/pulseaudio.desktop
+
+wget "https://raw.githubusercontent.com/sbroers/linux-on-hyper-v/master/xrdp/gui%20switch/gui.sh"
+chmod +x gui.sh
+mv gui.sh /bin/gui
 #
 
 #
