@@ -42,10 +42,9 @@ sudo sed -i 's/ls_logo_y_pos=50/ls_logo_y_pos=5/' /etc/xrdp/xrdp.ini
 sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=shared-drives/g' /etc/xrdp/sesman.ini
 
 # activating normal user access
-sed -i -e 's/TerminalServerUsers=tsusers/TerminalServerAdmins=sudo/g' /etc/xrdp/sesman.ini
+sed -i -e 's/TerminalServerUsers=tsusers/TerminalServerUsers=sudo/g' /etc/xrdp/sesman.ini
 sed -i -e 's/TerminalServerAdmins=tsadmins/TerminalServerAdmins=sudo/g' /etc/xrdp/sesman.ini
 sed -i -e 's/AlwaysGroupCheck=false/AlwaysGroupCheck=true/g' /etc/xrdp/sesman.ini
-addgroup tsusers
 
 # Changed the allowed_users
 sed -i_orig -e 's/allowed_users=console/allowed_users=anybody/g' /etc/X11/Xwrapper.config
@@ -73,8 +72,8 @@ ResultActive=yes
 EOF
 
 cat <<EOF | \
-  sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-NetworkManager.pkla
-[Netowrkmanager]
+sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-NetworkManager.pkla
+[Networkmanager]
 Identity=unix-group:sudo
 Action=org.freedesktop.NetworkManager.network-control
 ResultAny=yes
@@ -83,8 +82,8 @@ ResultActive=yes
 EOF
 
 cat <<EOF | \
-  sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-packagekit.pkla
-[Netowrkmanager]
+sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-packagekit.pkla
+[Networkmanager]
 Identity=unix-group:sudo
 Action=org.freedesktop.packagekit.system-sources-refresh
 ResultAny=yes

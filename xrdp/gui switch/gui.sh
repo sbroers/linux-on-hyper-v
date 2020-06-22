@@ -33,6 +33,10 @@ while true
         5) echo "cinnamon" > ~/.xsession
            GUI="Cinnamon"
            break ;;
+        6) echo "export GNOME_SHELL_SESSION_MODE=ubuntu" > ~/x.session
+           echo "export XDG_CURRENT_DESKTOP=ubuntu:GNOME" >> ~/x.session
+           echo "gnome-session" >> ~/x.session 
+           break ;;
         *) echo " "
            echo "Geben Sie 1-5 ein! $gui ist eine ungültige Eingabe!"
            ;;
