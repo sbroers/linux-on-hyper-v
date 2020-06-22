@@ -1,29 +1,10 @@
 #!/bin/bash
 
 codename=focal
-HWE=""
-#HWE="-hwe-20.04"
 
-###############################################################################
-# Update our machine to the latest code if we need to.
-#
-
-if [ "$(id -u)" -ne 0 ]; then
-    echo 'This script must be run with root privileges' >&2
-    exit 1
-fi
-
+echo 'This script must be run with root privileges' >&2
+ 
 apt update && apt upgrade -y
-
-if [ -f /var/run/reboot-required ]; then
-    echo "A reboot is required in order to proceed with the install." >&2
-    echo "Please reboot and re-run this script to finish the install." >&2
-    exit 1
-fi
-
-###############################################################################
-# XRDP
-#
 
 # Install hv_kvp utils
 apt install -y linux-tools-virtual${HWE}
