@@ -37,7 +37,10 @@ while true
            echo "startplasma-x11" >> ~/.xsession
            GUI="KDE Kubuntu"
            break ;;
-        5) echo "mate-session" > ~/.xsession
+        5) echo "export XDG_SESSION_DESKTOP=mate" > ~/.xsession
+           echo "XDG_CONFIG_DIRS=/etc/xdg/xdg-mate:/etc/xdg" >> ~/.xsession
+           echo "XDG_DATA_DIRS=/usr/share/mate:/usr/share/mate:/usr/local/share:/usr/share:/var/lib/snapd/desktop" >> ~/.xsession
+           echo "mate-session" >> ~/.xsession
            GUI="MATE"
            break ;;
         6) echo "cinnamon" > ~/.xsession
@@ -49,6 +52,7 @@ while true
         8) echo "export XDG_SESSION_DESKTOP=xubuntu" > ~/.xsession
            echo "export XDG_DATA_DIRS=/usr/share/xfce4:/usr/share/xubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share" >> ~/.xsession
            echo "XDG_CONFIG_DIRS=/etc/xdg/xdg-xubuntu:/etc/xdg:/etc/xdg" >> ~/.xsession
+           echo "startxfce4" >> ~/.xsession
            GUI="Xfce Xubuntu"
            break ;;
         *) echo " "
