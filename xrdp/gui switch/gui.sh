@@ -43,7 +43,10 @@ while true
            echo "mate-session" >> ~/.xsession
            GUI="MATE"
            break ;;
-        6) echo "cinnamon" > ~/.xsession
+        6) echo "export XDG_SESSION_DESKTOP=cinnamon" > ~/.xsession
+           echo "export XDG_DATA_DIRS=/usr/share/gnome:/usr/share/cinnamon:/usr/local/share:/usr/share:/var/lib/snapd/desktop" >> ~/.xsession
+           echo "export XDG_CONFIG_DIRS=/etc/xdg/xdg-cinnamon:/etc/xdg" >> ~/.xsession
+           echo "cinnamon" >> ~/.xsession
            GUI="Cinnamon"
            break ;;
         7) echo "startxfce4" > ~/.xsession
