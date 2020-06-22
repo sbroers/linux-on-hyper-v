@@ -1,5 +1,6 @@
 #!/bin/bash
 
+codename=focal
 HWE=""
 #HWE="-hwe-20.04"
 
