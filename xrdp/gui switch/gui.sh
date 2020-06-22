@@ -47,7 +47,7 @@ while true
            GUI="Xfce"
            break ;;
         *) echo " "
-           echo "Geben Sie 1-6 ein! $gui ist eine ungültige Eingabe!"
+           echo "Geben Sie 1-7 ein! $gui ist eine ungültige Eingabe!"
            ;;
       esac
 done
