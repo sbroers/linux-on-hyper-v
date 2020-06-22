@@ -1,8 +1,11 @@
 #!/bin/bash
 
-codename=focal
+if [ "$(id -u)" -ne 0 ]; then
+    echo 'This script must be run with root privileges' >&2
+    exit 1
+fi
 
-echo 'This script must be run with root privileges' >&2
+codename=focal
  
 apt update && apt upgrade -y
 

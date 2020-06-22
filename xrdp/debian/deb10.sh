@@ -7,11 +7,11 @@ fi
 
 # add backports repo
 
-echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
+echo deb http://deb.debian.org/debian buster-backports main contrib non-free | tee /etc/apt/sources.list.d/buster-backports.list
 apt update
 
-sudo apt install -t buster-backports linux-image-amd64
-sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree
+apt install -t buster-backports linux-image-amd64
+apt install -t buster-backports firmware-linux firmware-linux-nonfree
 
 # install hyper-v daemons and activate them
 
