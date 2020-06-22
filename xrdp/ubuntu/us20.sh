@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$(id -u)" -ne 0 ]; then
+    echo 'This script must be run with root privileges' >&2
+    exit 1
+fi
+
 # Install hv_kvp utils
 apt install -y linux-tools-virtual
 apt install -y linux-cloud-tools-virtual

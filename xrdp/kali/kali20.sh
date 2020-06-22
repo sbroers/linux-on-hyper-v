@@ -1,4 +1,11 @@
+#!/bin/bash
+
 # enhanced-session-mode kali 2020.02
+
+if [ "$(id -u)" -ne 0 ]; then
+    echo 'This script must be run with root privileges' >&2
+    exit 1
+fi
 
 # add backports repo
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
