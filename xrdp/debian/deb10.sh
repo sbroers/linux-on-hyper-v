@@ -157,6 +157,6 @@ chmod +x gui.sh
 mv gui.sh /bin/gui
 
 # finish
-echo "Install is complete."
-echo "Type gui in bash and select your GUI"
-echo "Reboot your machine to begin using XRDP."
+echo "Installation abgeschlossen."
+echo "Geben Sie gui ein, um ihre Grafischeoberfläche zu wählen. (Standard ist Gnome)"
+echo "Bitte die VM neustarten, um ESM zu benutzen."
