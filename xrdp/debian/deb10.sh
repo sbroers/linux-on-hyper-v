@@ -61,17 +61,17 @@ sed -i -e 's/AlwaysGroupCheck=false/AlwaysGroupCheck=true/g' /etc/xrdp/sesman.in
 # Changed the allowed_users
 sed -i_orig -e 's/allowed_users=console/allowed_users=anybody/g' /etc/X11/Xwrapper.config
 
-wget https://osdn.dl.osdn.net/linux-on-hyper-v/73077/griffon_logo_xrdp.bmp
+wget https://osdn.dl.osdn.net/linux-on-hyper-v/73546/debian.bmp
 
 #Check where to copy the logo file
 if [ -d "/usr/local/share/xrdp" ] 
 then
     echo "Directory /path/to/dir exists." 
-	sudo cp griffon_logo_xrdp.bmp /usr/local/share/xrdp
-    sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/local\/share\/xrdp\/griffon_logo_xrdp.bmp/g' /etc/xrdp/xrdp.ini
+	sudo cp debian.bmp /usr/local/share/xrdp
+    sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/local\/share\/xrdp\/debian.bmp/g' /etc/xrdp/xrdp.ini
 else
-    sudo cp griffon_logo_xrdp.bmp /usr/share/xrdp
-	sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/griffon_logo_xrdp.bmp/g' /etc/xrdp/xrdp.ini
+    sudo cp debian.bmp /usr/share/xrdp
+	sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/debian.bmp/g' /etc/xrdp/xrdp.ini
 fi
 sudo sed -i 's/#ls_title=My Login Title/ls_title=Enter User and Password/' /etc/xrdp/xrdp.ini
 
@@ -127,10 +127,36 @@ EOF
 systemctl daemon-reload
 systemctl start xrdp
 
+# audio
+sudo apt-get install git libpulse-dev autoconf m4 intltool build-essential dpkg-dev libtool libsndfile-dev libcap-dev -y libjson-c-dev
+sudo apt build-dep pulseaudio -y
+
+cd /tmp
+sudo apt source pulseaudio
+
+pulsever=$(pulseaudio --version | awk '{print $2}')
+cd /tmp/pulseaudio-$pulsever
+sudo ./configure
+
+sudo git clone https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
+cd pulseaudio-module-xrdp
+sudo ./bootstrap 
+sudo ./configure PULSE_DIR="/tmp/pulseaudio-$pulsever"
+sudo make
+
+cd /tmp/pulseaudio-$pulsever/pulseaudio-module-xrdp/src/.libs
+sudo install -t "/var/lib/xrdp-pulseaudio-installer" -D -m 644 *.so
+sudo install -t "/usr/lib/pulse-$pulsever/modules" -D -m 644 *.so
+echo
+
+sed -i "s/Exec=start-pulseaudio-x11/Exec=pulseaudio -k/" /etc/xdg/autostart/pulseaudio.desktop
+
+# gui
 wget "https://raw.githubusercontent.com/sbroers/linux-on-hyper-v/master/xrdp/gui%20switch/gui.sh"
 chmod +x gui.sh
 mv gui.sh /bin/gui
 
+# finish
 echo "Install is complete."
 echo "Type gui in bash and select your GUI"
 echo "Reboot your machine to begin using XRDP."
