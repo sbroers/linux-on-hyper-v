@@ -15,7 +15,7 @@ apt install -t buster-backports firmware-linux firmware-linux-nonfree -y
 
 # install hyper-v daemons and activate them
 
-apt install hyperv-daemons -y
+apt install hyperv-daemons xorgxrdp -y
 
 echo "# Hyper-V Modules" >> /etc/initramfs-tools/modules
 echo "hv_vmbus" >> /etc/initramfs-tools/modules
