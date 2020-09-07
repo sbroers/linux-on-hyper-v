@@ -143,10 +143,6 @@ wget "https://raw.githubusercontent.com/sbroers/linux-on-hyper-v/master/xrdp/gui
 chmod +x gui.sh
 mv gui.sh /bin/gui
 #
-
-#
-# End XRDP
-###############################################################################
-
 echo "Install is complete."
-echo "Reboot your machine to begin using XRDP."
+echo "Type gui in bash and select your GUI"
+echo "Than Reboot your machine to begin using XRDP."

@@ -107,5 +107,10 @@ EOF
 systemctl daemon-reload
 systemctl start xrdp
 
+wget "https://raw.githubusercontent.com/sbroers/linux-on-hyper-v/master/xrdp/gui%20switch/gui.sh"
+chmod +x gui.sh
+mv gui.sh /bin/gui
+
 echo "Install is complete."
+echo "Type gui in bash and select your GUI"
 echo "Reboot your machine to begin using XRDP."
