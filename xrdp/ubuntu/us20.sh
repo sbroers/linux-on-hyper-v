@@ -143,6 +143,6 @@ wget "https://raw.githubusercontent.com/sbroers/linux-on-hyper-v/master/xrdp/gui
 chmod +x gui.sh
 mv gui.sh /bin/gui
 #
-echo "Install is complete."
-echo "Type gui in bash and select your GUI"
-echo "Than Reboot your machine to begin using XRDP."
+echo "Installation abgeschlossen."
+echo "Geben Sie gui ein, um ihre Grafischeoberfläche zu wählen. (Standard ist Gnome)"
+echo "Bitte die VM neustarten, um ESM zu benutzen."
