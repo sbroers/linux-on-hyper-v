@@ -142,5 +142,6 @@ echo "export XDG_CURRENT_DESKTOP=ubuntu:GNOME" >> /home/$USER/.xsession
 echo "gnome-session" >> /home/$USER/.xsession
 
 echo "Installation abgeschlossen."
-echo "Geben Sie gui ein, um ihre Grafischeoberfläche zu wählen. (Standard ist Gnome)"
-echo "Bitte die VM neustarten, um ESM zu benutzen."
+echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
+echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus für die VM aktivieren."
+echo "Set-VM -VMName “ubuntu“ -EnhancedSessionTransportType HvSocket"

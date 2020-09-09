@@ -158,5 +158,6 @@ mv gui.sh /bin/gui
 
 # finish
 echo "Installation abgeschlossen."
-echo "Geben Sie gui ein, um ihre Grafischeoberfläche zu wählen. (Standard ist Gnome)"
-echo "Bitte die VM neustarten, um ESM zu benutzen."
+echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
+echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus für die VM aktivieren."
+echo "Set-VM -VMName “debian“ -EnhancedSessionTransportType HvSocket"

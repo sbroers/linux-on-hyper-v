@@ -15,6 +15,7 @@ while true
     echo "[5] MATE"
     echo "[6] Cinnamon"
     echo "[7] Xfce"
+    echo "[8] Xfce Xubuntu"
     echo " "
     read -p "Eingabe:" gui
 
