@@ -21,18 +21,10 @@ sed -i_orig -e 's/security_layer=negotiate/security_layer=rdp/g' /etc/xrdp/xrdp.
 sed -i_orig -e 's/crypt_level=high/crypt_level=none/g' /etc/xrdp/xrdp.ini
 sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
 
+# title screen & logo
 wget https://osdn.dl.osdn.net/linux-on-hyper-v/73547/ubuntu.bmp
-
-if [ -d "/usr/local/share/xrdp" ] 
-then
-    echo "Directory /path/to/dir exists." 
-	sudo mv ubuntu.bmp /usr/local/share/xrdp
-    sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/local\/share\/xrdp\/ubuntu.bmp/g' /etc/xrdp/xrdp.ini
-else
-    sudo mv ubuntu.bmp /usr/share/xrdp
-	sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/ubuntu.bmp/g' /etc/xrdp/xrdp.ini
-fi
-
+sudo mv ubuntu.bmp /usr/share/xrdp
+sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/ubuntu.bmp/g' /etc/xrdp/xrdp.ini
 sudo sed -i 's/#ls_title=My Login Title/ls_title=Enter User and Password/' /etc/xrdp/xrdp.ini
 sudo sed -i 's/ls_bg_color=dedede/ls_bg_color=ffffff/' /etc/xrdp/xrdp.ini
 sudo sed -i 's/ls_logo_x_pos=55/ls_logo_x_pos=0/' /etc/xrdp/xrdp.ini
@@ -130,12 +122,11 @@ chmod +x gui.sh
 mv gui.sh /bin/gui
 
 # gui gnomeubuntu
-echo "export GNOME_SHELL_SESSION_MODE=ubuntu" > .xsession
-echo "export XDG_CURRENT_DESKTOP=ubuntu:GNOME" >> .xsession
-echo "gnome-session" >> .xsession
-cp .xsession /home/*/
-cp .xsession /etc/skel/
-rm .xsession
+echo "export GNOME_SHELL_SESSION_MODE=ubuntu" > /tmp/.xsession
+echo "export XDG_CURRENT_DESKTOP=ubuntu:GNOME" >> /tmp/.xsession
+echo "gnome-session" >> /tmp/.xsession
+cp /tmp/.xsession /home/*/
+cp /tmp/.xsession /etc/skel/
 
 echo "Installation abgeschlossen."
 echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
