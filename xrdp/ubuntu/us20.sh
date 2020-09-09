@@ -7,6 +7,14 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Install hv_kvp utils
+
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal main restricted'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-updates restricted universe main multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse'
+sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-security main restricted universe main multiverse'
+
+apt update && apt upgrade -y
 apt install -y linux-tools-virtual
 apt install -y linux-cloud-tools-virtual
 
@@ -22,7 +30,7 @@ sed -i_orig -e 's/crypt_level=high/crypt_level=none/g' /etc/xrdp/xrdp.ini
 sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
 
 # title screen & logo
-wget https://osdn.dl.osdn.net/linux-on-hyper-v/73547/ubuntu.bmp
+wget https://osdn.dl.osdn.net/linux-on-hyper-v/73553/ubuntu.bmp
 sudo cp ubuntu.bmp /usr/share/xrdp
 sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/ubuntu.bmp/g' /etc/xrdp/xrdp.ini
 sudo sed -i 's/#ls_title=My Login Title/ls_title=Enter User and Password/' /etc/xrdp/xrdp.ini
@@ -86,14 +94,7 @@ systemctl daemon-reload
 systemctl start xrdp
 
 # audio
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal main restricted'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-updates restricted universe main multiverse'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse'
-sudo apt-add-repository -s 'deb http://de.archive.ubuntu.com/ubuntu/ focal-security main restricted universe main multiverse'
-sudo apt-get update
-
-sudo apt-get install git libpulse-dev autoconf m4 intltool build-essential dpkg-dev libtool libsndfile-dev libcap-dev -y libjson-c-dev
+sudo apt install git libpulse-dev autoconf m4 intltool build-essential dpkg-dev libtool libsndfile-dev libcap-dev libjson-c-dev -y
 sudo apt build-dep pulseaudio -y
 
 cd /tmp
