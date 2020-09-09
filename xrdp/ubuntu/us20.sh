@@ -23,7 +23,7 @@ sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/
 
 # title screen & logo
 wget https://osdn.dl.osdn.net/linux-on-hyper-v/73547/ubuntu.bmp
-sudo mv ubuntu.bmp /usr/share/xrdp
+sudo cp ubuntu.bmp /usr/share/xrdp
 sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/ubuntu.bmp/g' /etc/xrdp/xrdp.ini
 sudo sed -i 's/#ls_title=My Login Title/ls_title=Enter User and Password/' /etc/xrdp/xrdp.ini
 sudo sed -i 's/ls_bg_color=dedede/ls_bg_color=ffffff/' /etc/xrdp/xrdp.ini
@@ -132,5 +132,3 @@ echo "Installation abgeschlossen."
 echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
 echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus für die VM aktivieren."
 echo "Set-VM -VMName “ubuntu“ -EnhancedSessionTransportType HvSocket"
-
-rm ysou
