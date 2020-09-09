@@ -138,4 +138,5 @@ echo "Installation abgeschlossen."
 echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
 echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus für die VM aktivieren."
 echo "Set-VM -VMName “ubuntu“ -EnhancedSessionTransportType HvSocket"
-echo "Benutzer die den ESM verwenden möchten, müssen in der Gruppe sudo sein!"
+
+rm ub20.sh
