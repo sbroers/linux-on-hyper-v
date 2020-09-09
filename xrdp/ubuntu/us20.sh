@@ -130,13 +130,16 @@ chmod +x gui.sh
 mv gui.sh /bin/gui
 
 # gui gnomeubuntu
-echo "export GNOME_SHELL_SESSION_MODE=ubuntu" > /home/$USER/.xsession
-echo "export XDG_CURRENT_DESKTOP=ubuntu:GNOME" >> /home/$USER/.xsession
-echo "gnome-session" >> /home/$USER/.xsession
+echo "export GNOME_SHELL_SESSION_MODE=ubuntu" > .xsession
+echo "export XDG_CURRENT_DESKTOP=ubuntu:GNOME" >> .xsession
+echo "gnome-session" >> .xsession
+cp .xsession /home/*/
+cp .xsession /etc/skel/
+rm .xsession
 
 echo "Installation abgeschlossen."
 echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
 echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus für die VM aktivieren."
 echo "Set-VM -VMName “ubuntu“ -EnhancedSessionTransportType HvSocket"
 
-rm ub20.sh
+rm ysou
