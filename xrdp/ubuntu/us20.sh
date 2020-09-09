@@ -1,7 +1,8 @@
 #!/bin/bash
+# enhanced-session-mode for ubuntu 20.04
 
 if [ "$(id -u)" -ne 0 ]; then
-    echo 'This script must be run with root privileges' >&2
+    echo 'Dieses Skript muss mit root Rechten ausgeführt werden!' >&2
     exit 1
 fi
 
@@ -11,47 +12,39 @@ apt install -y linux-cloud-tools-virtual
 
 # Install the xrdp service so we have the auto start behavior
 apt install -y xrdp
-
 systemctl stop xrdp
 systemctl stop xrdp-sesman
 
 # Configure the installed XRDP ini files.
-# use vsock transport.
 sed -i_orig -e 's/port=3389/port=vsock:\/\/-1:3389/g' /etc/xrdp/xrdp.ini
-# use rdp security.
 sed -i_orig -e 's/security_layer=negotiate/security_layer=rdp/g' /etc/xrdp/xrdp.ini
-# remove encryption validation.
 sed -i_orig -e 's/crypt_level=high/crypt_level=none/g' /etc/xrdp/xrdp.ini
-# disable bitmap compression since its local its much faster
 sed -i_orig -e 's/bitmap_compression=true/bitmap_compression=false/g' /etc/xrdp/xrdp.ini
 
 wget https://osdn.dl.osdn.net/linux-on-hyper-v/73547/ubuntu.bmp
 
-#Check where to copy the logo file
 if [ -d "/usr/local/share/xrdp" ] 
 then
     echo "Directory /path/to/dir exists." 
-	sudo cp ubuntu.bmp /usr/local/share/xrdp
+	sudo mv ubuntu.bmp /usr/local/share/xrdp
     sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/local\/share\/xrdp\/ubuntu.bmp/g' /etc/xrdp/xrdp.ini
 else
-    sudo cp ubuntu.bmp /usr/share/xrdp
+    sudo mv ubuntu.bmp /usr/share/xrdp
 	sudo sed -i 's/ls_logo_filename=/ls_logo_filename=\/usr\/share\/xrdp\/ubuntu.bmp/g' /etc/xrdp/xrdp.ini
 fi
-sudo sed -i 's/#ls_title=My Login Title/ls_title=Enter User and Password/' /etc/xrdp/xrdp.ini
 
+sudo sed -i 's/#ls_title=My Login Title/ls_title=Enter User and Password/' /etc/xrdp/xrdp.ini
 sudo sed -i 's/ls_bg_color=dedede/ls_bg_color=ffffff/' /etc/xrdp/xrdp.ini
 sudo sed -i 's/ls_logo_x_pos=55/ls_logo_x_pos=0/' /etc/xrdp/xrdp.ini
 sudo sed -i 's/ls_logo_y_pos=50/ls_logo_y_pos=5/' /etc/xrdp/xrdp.ini
 
 # rename the redirected drives to 'shared-drives'
-sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=shared-drives/g' /etc/xrdp/sesman.ini
+sed -i -e 's/FuseMountName=thinclient_drives/FuseMountName=Gemeinsame-Laufwerke/g' /etc/xrdp/sesman.ini
 
 # activating normal user access
 sed -i -e 's/TerminalServerUsers=tsusers/TerminalServerUsers=sudo/g' /etc/xrdp/sesman.ini
 sed -i -e 's/TerminalServerAdmins=tsadmins/TerminalServerAdmins=sudo/g' /etc/xrdp/sesman.ini
 sed -i -e 's/AlwaysGroupCheck=false/AlwaysGroupCheck=true/g' /etc/xrdp/sesman.ini
-
-# Changed the allowed_users
 sed -i_orig -e 's/allowed_users=console/allowed_users=anybody/g' /etc/X11/Xwrapper.config
 
 # Blacklist the vmw module
@@ -61,7 +54,7 @@ blacklist vmw_vsock_vmci_transport
 EOF
 fi
 
-#Ensure hv_sock gets loaded
+# Ensure hv_sock gets loaded
 if [ ! -e /etc/modules-load.d/hv_sock.conf ]; then
 echo "hv_sock" > /etc/modules-load.d/hv_sock.conf
 fi
@@ -145,3 +138,4 @@ echo "Installation abgeschlossen."
 echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
 echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus für die VM aktivieren."
 echo "Set-VM -VMName “ubuntu“ -EnhancedSessionTransportType HvSocket"
+echo "Benutzer die den ESM verwenden möchten, müssen in der Gruppe sudo sein!"
