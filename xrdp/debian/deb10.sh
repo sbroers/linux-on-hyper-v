@@ -2,13 +2,13 @@
 # enhanced-session-mode for debian 10.5
 
 if [ "$(id -u)" -ne 0 ]; then
-    echo 'This script must be run with root privileges' >&2
+    echo 'Dieses Skript muss als root ausgeführt werden!' >&2
     exit 1
 fi
 
 # add backports repo
 echo deb http://deb.debian.org/debian buster-backports main contrib non-free | tee /etc/apt/sources.list.d/buster-backports.list
-apt update
+apt update && apt upgrade -y
 apt install -t buster-backports linux-image-amd64 -y
 apt install -t buster-backports firmware-linux firmware-linux-nonfree -y
 
@@ -143,6 +143,9 @@ sed -i "s/Exec=start-pulseaudio-x11/Exec=pulseaudio -k/" /etc/xdg/autostart/puls
 wget "https://raw.githubusercontent.com/sbroers/linux-on-hyper-v/master/xrdp/gui%20switch/gui.sh"
 chmod +x gui.sh
 mv gui.sh /bin/gui
+echo "gnome-session" >> /tmp/.xsession
+cp /tmp/.xsession /home/*/
+cp /tmp/.xsession /etc/skel/
 
 # finish
 echo "Installation abgeschlossen."
