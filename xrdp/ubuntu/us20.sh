@@ -129,7 +129,14 @@ echo "gnome-session" >> /tmp/.xsession
 cp /tmp/.xsession /home/*/
 cp /tmp/.xsession /etc/skel/
 
-echo "Installation abgeschlossen."
-echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
-echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus für die VM aktivieren."
-echo "Set-VM -VMName “ubuntu“ -EnhancedSessionTransportType HvSocket"
+# finish
+clear
+echo -e "\033[1;36m *********************************************************************\033[0m"
+echo -e "\033[1;36m *                 Installation abgeschlossen.                       *\033[0m"
+echo -e "\033[1;36m *********************************************************************\033[0m"
+echo -e "\033[1;36m * Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen.*\033[0m"
+echo -e "\033[1;36m *(Standard ist Gnome)                                               *\033[0m"
+echo -e "\033[1;36m *                                                                   *\033[0m"
+echo -e "\033[1;36m * Bitte die VM herunterfahren und per PS den ESM aktivieren:        *\033[0m"
+echo -e "\033[1;36m * Set-VM -VMName “NAME“ -EnhancedSessionTransportType HvSocket      *\033[0m"
+echo -e "\033[1;36m *********************************************************************\033[0m"

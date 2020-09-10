@@ -148,6 +148,7 @@ cp /tmp/.xsession /home/*/
 cp /tmp/.xsession /etc/skel/
 
 # finish
+clear
 echo "Installation abgeschlossen."
 echo "Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen. (Standard ist Gnome)"
 echo "Bitte die VM herunterfahren und per Powershellbefehl den Erweiterten Sitzungmodus (ESM) für die VM aktivieren."
