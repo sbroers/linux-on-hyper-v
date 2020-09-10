@@ -131,12 +131,14 @@ cp /tmp/.xsession /etc/skel/
 
 # finish
 clear
+echo -e "\n"
 echo -e "\033[1;36m *********************************************************************\033[0m"
 echo -e "\033[1;36m *                 Installation abgeschlossen.                       *\033[0m"
 echo -e "\033[1;36m *********************************************************************\033[0m"
 echo -e "\033[1;36m * Geben Sie gui ein, um ihre Grafischeoberfläche für xRDP zu wählen.*\033[0m"
-echo -e "\033[1;36m *(Standard ist Gnome)                                               *\033[0m"
+echo -e "\033[1;36m *                    (Standard ist Gnome)                           *\033[0m"
 echo -e "\033[1;36m *                                                                   *\033[0m"
-echo -e "\033[1;36m * Bitte die VM herunterfahren und per PS den ESM aktivieren:        *\033[0m"
-echo -e "\033[1;36m * Set-VM -VMName “NAME“ -EnhancedSessionTransportType HvSocket      *\033[0m"
+echo -e "\033[1;36m *    Bitte die VM herunterfahren und per PS den ESM aktivieren:     *\033[0m"
+echo -e "\033[1;36m *   Set-VM -VMName “NAME“ -EnhancedSessionTransportType HvSocket    *\033[0m"
 echo -e "\033[1;36m *********************************************************************\033[0m"
+echo -e "\n"
