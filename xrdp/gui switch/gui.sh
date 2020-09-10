@@ -6,7 +6,9 @@ unset GUI
 
 while true
   do
-    echo "Wählen Sie die GUI aus, die Sie für xRDP verwenden möchten:"
+    echo "Wählen Sie die GUI aus, die Sie für xRDP verwenden möchten."
+    echo "Die jeweilige GUI muss installiert sein und über den normalen Modus,"
+    echo "einmalig gestartet worden sein!"
     echo " "
     echo "[1] Gnome 3"
     echo "[2] Gnome Ubuntu"
